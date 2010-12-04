@@ -1,7 +1,8 @@
 #!/bin/sh
 
-(
-echo bin/epiar
-echo share/Epiar/bin/epiar
-(cd ../../Epiar.master; find Resources| sed 's/^/share\/Epiar\//')
-) > pkg-plist
+(cd ../Epiar.master
+find Resources | awk 'BEGIN { print "bin/epiar" } {
+	if(! (/,v$/ || /Definitions.*xml$/) ){
+		printf("share/Epiar/%s\n", $0)
+	}
+}' ) | sort > pkg-plist
