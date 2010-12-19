@@ -2,4 +2,6 @@ Epiar is a space adventure/trading game with a top down perspective.
 You can travel between planets, carry out missions, buy and sell
 commodities, weapons, and upgrades, and fight other ships.
 
+This port will fetch and build the latest development version from GitHub.
+
 WWW: http://www.epiar.net/
